@@ -39,3 +39,14 @@ pre:has(code.language-html)::before {
 pre:has(code.language-css)::before {
     content: "css";
 }
+
+.pagination{
+    display: flex;
+    width: 100%;
+}
+.page-item{
+    flex: 1;
+}
+.page-item button{
+    width: 100%;
+}
