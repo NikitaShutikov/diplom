@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% for chapter in chapters %}
+    <h2>{{chapter.name}}</h2>
+    <a href="{% url "chapter" chapter.num %}">Перейти</a>
+{% endfor %}
+
+{% endblock main %}
+
+
