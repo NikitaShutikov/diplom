@@ -8,9 +8,10 @@
     --code-border: var(--bs-gray-200);
     --code-header: var(--bs-gray);
 }
-img {
+main img {
     max-width: 100%;
     height: auto;
+    border: 1px solid var(--code-border);
 }
 
 
@@ -42,7 +43,9 @@ pre:has(code.language-css)::before {
 
 .pagination{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+
 }
 .page-item{
     flex: 1;
@@ -50,3 +53,4 @@ pre:has(code.language-css)::before {
 .page-item button{
     width: 100%;
 }
+

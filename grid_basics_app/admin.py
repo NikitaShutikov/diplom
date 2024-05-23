@@ -36,6 +36,8 @@ class ChapterAdmin(nested_admin.NestedModelAdmin):
     list_display = ['__str__']
     search_fields = ["name"]
     fields = ['index', 'name', 'content']
+    ordering = ('index',)
+    
 
 
 admin.site.register(Chapter, ChapterAdmin)

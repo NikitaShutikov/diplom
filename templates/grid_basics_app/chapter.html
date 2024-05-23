@@ -11,7 +11,7 @@
 		<!-- Scrollspy -->
 		<nav id="navbar-theory" class="sticky-top py-5 px-3 mx-2">
 			<ul class="nav nav-pills flex-column nav-justified">
-				<span class="fs-4 my-4">Пособие</span>
+				<span class="fs-4 my-4 px-3">Пособие</span>
 				{% for chap in chapters %}
 				<li>
 					<a class="nav-link {% if request.resolver_match.kwargs.chapter_url_name  == chap.url_name %}active{% endif %}" href="/chapters/{{chap.url_name}}">{{chap.name}}</a>
@@ -28,9 +28,9 @@
 
 		<nav class="flex-wrap w-100 d-flex align-items justify-content-center">
 			<ul class="pagination">
-				{% if prev_chap %}<li class="page-item text-center"><a class="page-link px-5" href="/chapters/{{prev_chap.url_name}}">Назад</a></li>{% endif %}
+				{% if prev_chap %}<li class="page-item text-center"><a class="page-link px-5 rounded-0" href="/chapters/{{prev_chap.url_name}}">Назад</a></li>{% endif %}
 				{% if test %}
-					<li class="page-item text-center"><button type="button" class="page-link px-5" data-bs-toggle="modal" data-bs-target="#testWindow" onclick="self.test.create()">
+					<li class="page-item text-center"><button type="button" class="page-link px-5 rounded-0" data-bs-toggle="modal" data-bs-target="#testWindow" onclick="self.test.create()">
 						Тест
 					</button></li>
 
@@ -78,7 +78,7 @@
 						</div>
 					</div>
 				{% endif %}
-				{% if next_chap %}<li class="page-item text-center"><a class="page-link px-5" href="/chapters/{{next_chap.url_name}}">Далее</a></li>{% endif %}
+				{% if next_chap %}<li class="page-item text-center"><a class="page-link px-5 rounded-0" href="/chapters/{{next_chap.url_name}}">Далее</a></li>{% endif %}
 			</ul>
 		</nav>
 	</div>
