@@ -31,7 +31,7 @@ CKEDITOR.dialog.add('htmleditorDialog', function(editor) {
           debugger;
           editor.insertHtml(`
           <div class='html-editor'>
-            <textarea class="form-control" spellcheck="false"><pre><code class="language-html">123</code></pre></textarea>
+            <textarea class="form-control language-html" spellcheck="false"><pre><code class="language-html">123</code></pre></textarea>
             <iframe src=""></iframe> 
           </div>
           `);
