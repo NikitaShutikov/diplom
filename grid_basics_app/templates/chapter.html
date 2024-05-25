@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/chapter.css" %}">
+{% endblock head %}
+
+{% block main_container %}
+<main class="container-fluid row">
+	<div class="col-3 border-end d-none d-lg-block" >
+		<!-- Scrollspy -->
+		<nav id="navbar-theory" class="sticky-top py-5 px-3 mx-2">
+			<ul class="nav nav-pills flex-column nav-justified">
+				<span class="fs-4 my-4 px-3">Пособие</span>
+				{% for chap in chapters %}
+				<li>
+					<a class="nav-link {% if request.resolver_match.kwargs.chapter_url_name  == chap.url_name %}active{% endif %}" href="/chapters/{{chap.url_name}}">{{chap.name}}</a>
+				</li>
+				{% endfor %}
+
+			</ul>
+		</nav>
+	</div>
+
+	<div class="col-lg-9 py-5">
+		<h1 class="my-4 fw-bold">{{chapter.name}}</h1>
+		{{chapter.content|safe}}
+
+		<nav class="flex-wrap w-100 d-flex align-items justify-content-center">
+			<ul class="pagination">
+				{% if prev_chap %}<li class="page-item text-center"><a class="page-link px-5 rounded-0" href="/chapters/{{prev_chap.url_name}}">Назад</a></li>{% endif %}
+				{% if test %}
+					<li class="page-item text-center"><button type="button" class="page-link px-5 rounded-0" data-bs-toggle="modal" data-bs-target="#testWindow" onclick="self.test.create()">
+						Тест
+					</button></li>
+
+
+					<div class="modal fade" id="testWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="testWindowLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="testWindowLabel">Тест</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body" id="test">
+									<script>
+									document.addEventListener("DOMContentLoaded", function(){
+										self.test = new Test([
+											{% for question in test.question_set.all %}
+											new Question("{{question.value}}", [
+											{% if question.type == question.Types.SINGLE_CHOICE %}
+												{% for answer in question.answer_set.all %}
+													new ChoiceAnswer("{{question.value}}", {{answer.pk}}, "{{answer.value}}", {{answer.is_right|lower}}),
+												{% endfor %}
+											{% elif question.type == question.Types.MULTIPLE_CHOICE %}
+												{% for answer in question.answer_set.all %}
+													new MultipleChoiceAnswer({{answer.pk}}, "{{answer.value}}", {{answer.is_right|lower}}),
+												{% endfor %}
+											{% else %}
+												{% for answer in question.answer_set.all %}
+													{% if answer.is_right %}
+													new TextAnswer({{answer.pk}}, "{{answer.value}}"),
+													{% endif %}
+												{% endfor %}
+											{% endif %}
+											]),
+											{% endfor %}
+										], document.getElementById('test'), document.getElementById('test-results'))
+									});
+									</script>
+								</div>
+								<div class="modal-footer">
+									<div class="alert alert-info d-none" role="alert" id="test-results"></div>
+									<input type="submit" class="btn btn-primary w-100" value="Проверить" onclick="self.test.validate()"/>
+									<input type="submit" class="btn btn-secondary w-100" value="Заново" onclick="self.test.create()"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+				{% if next_chap %}<li class="page-item text-center"><a class="page-link px-5 rounded-0" href="/chapters/{{next_chap.url_name}}">Далее</a></li>{% endif %}
+			</ul>
+		</nav>
+	</div>
+</main>
+<script src="{% static 'js/test.js' %}" defer></script>
+<script src="{% static 'js/html_editor.js' %}" defer></script>
+{% endblock main_container %}
+
+

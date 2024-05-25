@@ -7,7 +7,7 @@ from .models import Chapter
 class IndexView(View):
     def get(self, request):
         chapters = Chapter.objects.all().order_by('index')
-        return render(request, 'grid_basics_app/index.html', locals())
+        return render(request, 'index.html', locals())
     
 class ChapterView(View):
     # def get_common_vars(self, chapter_url_name, request=None):
@@ -28,7 +28,7 @@ class ChapterView(View):
         context['prev_chap'] = Chapter.objects.filter(index__lt=context['chapter'].index).order_by('-index').first()
         context['next_chap'] = Chapter.objects.filter(index__gt=context['chapter'].index).order_by('index').first()
         context['test'] = context['chapter'].test_set.all().first()
-        return render(request, 'grid_basics_app/chapter.html', context)
+        return render(request, 'chapter.html', context)
     
     # def post(self, request, chapter_url_name):
     #     context = self.get_common_vars(chapter_url_name, request)

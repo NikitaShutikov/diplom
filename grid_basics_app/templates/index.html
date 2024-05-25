@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/index.css" %}">
+{% endblock head %}
+
+{% block body %}
+{{ block.super }}
+<div class="bg"></div>
+{% endblock body %}
+
+{% block main_container %}
+{{ block.super }}
+
+<main class="container-fluid">
+    <div id="carousel" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="4000">
+
+        <button class="carousel-control-prev position-relative" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		  </button>
+
+        <div class="carousel-inner text-center text-break">
+          <div class="carousel-item active">
+			<h1 class="fw-light m-0">Электронное пособие</h1>
+			<p class="fs-5 fw-light text-body-secondary my-4">Основы адаптивной верстки с использованием <b>CSS Grid</b></p>
+			<a class="btn btn-outline-primary btn-lg rounded-5 p-3" href="/chapters/{{chapters.0.url_name}}">
+				<span>Перейти к пособию</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+				</svg>
+			</a>
+          </div>
+          <div class="carousel-item">
+			<h1 class="fw-light m-0">Что такое Grid?</h1>
+            <p class="fs-5 fw-light text-body-secondary my-4">
+                <b>Grid Layout в CSS</b> — это гибкая разметка, при которой элементы располагаются в виде таблицы. Таблица состоит из ячеек, которые можно собирать в целые области.
+            </p>
+			<a class="btn btn-outline-primary btn-lg rounded-5 p-3" href="/chapters/{{chapters.0.url_name}}">
+				<span>Перейти к пособию</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+				</svg>
+			</a>
+          </div>
+          <div class="carousel-item">
+			<h1 class="fw-light m-0">Из чего состоит Grid?</h1>
+            <p class="fs-5 fw-light text-body-secondary my-4">
+            	<b>Grid</b> состоит из родительского контейнера и вложенных в него элементов. Элементы могут занимать несколько ячеек, которые складываются в столбцы, колонки или области..
+            </p>
+			<a class="btn btn-outline-primary btn-lg rounded-5 p-3" href="/chapters/{{chapters.0.url_name}}">
+				<span>Перейти к пособию</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+				</svg>
+			</a>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-next position-relative" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+</main>
+
+{% endblock main_container %}
+
+
+

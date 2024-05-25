@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'nested_admin',
     'ckeditor',
     'ckeditor_uploader',
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'grid_basics.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'templates/grid_basics_app'],
+        'DIRS': [BASE_DIR / 'gris_basics_app/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,17 +139,22 @@ CKEDITOR_CONFIGS = {
         'toolbar': [
             [
              '-', 'Format',
-             '-', 'Link', 'Unlink', 'CodeSnippet',
+             '-', 'Link', 'Unlink', 'CodeSnippet', 'HtmlEditor', 'Source',
              '-', 'Image',
              '-', 'NumberedList', 'BulletedList'
             ],
         ],
+        'codeSnippet_languages': {
+            'html': 'HTML',
+            'css': 'CSS'
+        },
         'extraPlugins': ','.join(
             [
-                'codesnippet',
+                'codesnippet', 'htmleditor', 'sourcedialog'
             ]),
         'width': '900px',
         'toolbarCanCollapse': False,
-        'forcePasteAsPlainText': True
+        'forcePasteAsPlainText': True,
+        'allowedContent': True,
     }
 }

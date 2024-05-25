@@ -15,18 +15,19 @@ main img {
 }
 
 
-pre {
+pre, textarea {
     color: var(--bs-code-color);
     border: 1px solid var(--code-border);
     overflow: auto;
     display: block;
 }
-pre code{
+pre code, textarea {
     border-left: 3px solid #e685b5;
     padding: 1em 1.5em;
     display: block;
 }
-pre::before{
+
+pre::before, textarea::before{
     text-transform: uppercase;
     padding: 0.1em 1.5em;
     display: block;
