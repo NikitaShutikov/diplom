@@ -1,4 +1,4 @@
-function oninputEvent(textarea, iframe)
+function updateIframe(textarea, iframe)
 {
     textarea.style.overflow = 'hidden';
     textarea.style.height = 0;
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let textarea = e.children[0];
         let iframe = e.children[1];
-        textarea.addEventListener('input', function() { oninputEvent(textarea, iframe) } );
+        textarea.addEventListener('input', function() { updateIframe(textarea, iframe) } );
+        updateIframe(textarea, iframe);
     }
 })

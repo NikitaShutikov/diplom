@@ -25,6 +25,7 @@ pre code, textarea {
     border-left: 3px solid #e685b5 !important;
     padding: 1em 1.5em !important;
     display: block !important;
+    border-radius: 0 !important;
 }
 
 pre::before, .html-editor::before{
