@@ -34,7 +34,7 @@ CKEDITOR.dialog.add('htmleditorDialog', function(editor) {
           editor.insertHtml(`
           <div class='html-editor d-flex flex-wrap flex-lg-nowrap gap-3 gap-lg-0'>
             <textarea class="form-control language-html" spellcheck="false">${markup_val}</textarea>
-            <iframe sandbox="allow-scripts" class="ratio border border-dark-subtle rounded-3" src=""></iframe> 
+            <iframe sandbox="allow-scripts" class="ratio border border-dark-subtle" src=""></iframe> 
           </div>
           `);
         }

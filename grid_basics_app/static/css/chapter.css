@@ -42,10 +42,10 @@ pre:has(code.language-html)::before {
 .html-editor{
     margin-bottom: 1rem;
 }
-.html-editor::before {
+/* .html-editor::before {
     content: "html редактор";
     font-size: 14px;
-}
+} */
 pre:has(code.language-css)::before {
     content: "css";
 }
