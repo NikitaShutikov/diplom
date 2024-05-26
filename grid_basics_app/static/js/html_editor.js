@@ -1,9 +1,6 @@
 function updateIframe(textarea, iframe)
 {
-    textarea.style.overflow = 'hidden';
-    textarea.style.height = 0;
-    textarea.style.height = textarea.scrollHeight + 'px';
-    
+
     iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
     iframe.document.open();
     iframe.document.write(textarea.value);
@@ -19,5 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
         let iframe = e.children[1];
         textarea.addEventListener('input', function() { updateIframe(textarea, iframe) } );
         updateIframe(textarea, iframe);
+        textarea.style.height = 0;
+        textarea.style.height = textarea.scrollHeight + 'px';
     }
 })

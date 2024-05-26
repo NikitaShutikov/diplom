@@ -156,5 +156,6 @@ CKEDITOR_CONFIGS = {
         'toolbarCanCollapse': False,
         'forcePasteAsPlainText': True,
         'allowedContent': True,
+        'iframe_attributes': {},
     }
 }
