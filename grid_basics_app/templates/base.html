@@ -5,69 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/base.css" %}">
-
     {% block head %}{% endblock head %}
 </head>
 <body>
-    {% block body %}
-        <div class="container py-2">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/">
-                    <img src="{% static "media/logo.svg" %}" alt="logo" width="34" height="34">
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="navbar">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="container-fluid offcanvas w-100 offcanvas-end" tabindex="-1" id="navbar" aria-labelledby="navbarLabel">
-                    <div class="offcanvas-header border-bottom">
-                      <a class="navbar-brand" href="/">
-                        <img src="{% static "media/logo.svg" %}" alt="logo" width="34" height="34">
-                      </a>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                    </div>
-                    <div class="offcanvas-body align-items-center">
-                      <ul class="navbar-nav justify-content-end align-items-lg-center flex-grow-1">
-                        {% with request.resolver_match.url_name as url_name %}
-                          <li class="nav-item px-2">
-                            <a class="nav-link {% if url_name == 'index' %}active{% endif %}" href="/">Главная</a>
-                          </li>
+  {% block body %}
+  <div class="header">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a class="navbar__brand" href="/">
+            <img src="{% static "media/logo.svg" %}" alt="logo" width="34" height="34">
+          </a>
+          <button class="navbar__toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+            <span></span>
+          </button>
+          <div class="offcanvas" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas__header border-bottom">
+              <a class="offcanvas__brand" href="/">
+                <img src="{% static "media/logo.svg" %}" alt="logo" width="34" height="34">
+              </a>
+              <button class="offcanvas__close-btn"  type="button" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas__body">
+              <ul class="nav">
+                {% with request.resolver_match.url_name as url_name %}
+                  <li class="nav__item">
+                    <a class="nav__link {% if url_name == 'index' %}active{% endif %}" href="/">Главная</a>
+                  </li>
 
-                          <li class="nav-item dropdown px-2">
-                            <a class="nav-link dropdown-toggle {% if url_name == 'chapter' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Пособие</a>
-                            <ul class="dropdown-menu">
-                              {% for chap in chapters %}
-                                <li><a class="dropdown-item" href="/chapters/{{chap.url_name}}">{{chap.name}}</a></li>
-                              {% endfor %}
-                            </ul>
-                          </li>
+                  <li class="nav__item dropdown">
+                    <a class="nav-link dropdown-toggle {% if url_name == 'chapter' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Пособие</a>
+                    <ul class="dropdown-menu">
+                      {% for chap in chapters %}
+                        <li><a class="dropdown-item" href="/chapters/{{chap.url_name}}">{{chap.name}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </li>
 
-                          <li class="nav-item px-2 text-center">
-                              <button type="button" class="btn" id="theme-toggle">
-                                  <img src="{% static "media/theme.svg" %}" alt="logo" width="34" height="34">
-                              </button>
-                          </li>
-                        {% endwith %}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-            </nav>
+                  <li class="nav__item text-center">
+                      <button type="button" class="btn" id="theme-toggle">
+                          <img src="{% static "media/theme.svg" %}" alt="logo" width="34" height="34">
+                      </button>
+                  </li>
+                {% endwith %}
+              </ul>
+            </div>
+          </div>
         </div>
+      </nav>
+  </div>
 
-        <div class="container d-flex justify-content-center">
-            {% block main_container %}
+  <div class="main">
+      {% block main_container %}
 
-            {% endblock main_container %}
-        </div>
-        <div class="container">
-          <footer class="py-3 my-4 border-top">
-            <p class="text-muted text-center">NikitaShutikov</p>
-          </footer>
-        </div>
-    {% endblock body %}
+      {% endblock main_container %}
+  </div>
+  <div class="footer">
+    <p>NikitaShutikov</p>
+  </div>
+{% endblock body %}
 
     <script src="{% static 'js/theme.js' %}" defer></script>
-    <script src="{% static 'bootstrap\js\bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

@@ -17,15 +17,12 @@
 .djn-group-nested.grp-stacked > .grp-tools {
   display: none;
 }
-
 .djn-group-nested {
   border-color: transparent;
 }
-
 .grp-tools span.delete {
   cursor: auto !important;
 }
-
 .djn-group-nested .djn-items .inline-related {
   border: 1px solid transparent;
   border-radius: 4px;
@@ -42,7 +39,6 @@
   &:first-child {
     margin-top: 0;
   }
-
   &.last-related {
     margin-bottom: 0;
   }
@@ -57,33 +53,28 @@
   margin-bottom: 5px;
   background: #9f9f9f !important;
 }
-
 .djn-group .ui-nestedsortable-error,
 .djn-group .ui-nestedSortable-error {
   background: #9f6464 !important;
 }
-
 .ui-sortable .grp-module.ui-sortable-placeholder.ui-nestedSortable-error {
   background-color: #9f6464 !important;
 }
 
 .djn-items {
   position: relative;
-  overflow: visible;
   min-height: 0;
+  overflow: visible;
 }
-
 .djn-item {
   overflow: visible;
 }
-
 .djn-item.djn-no-drag:first-child {
   position: absolute;
-  z-index: -1;
   top: 0;
   right: 0;
   left: 0;
-
+  z-index: -1;
   height: 19px;
 
   & + .djn-item.ui-sortable-helper,
@@ -93,19 +84,16 @@
 }
 
 .djn-item-dragging {
-  overflow: hidden;
-
   height: 0;
-  margin: 0;
   padding: 0;
-
+  margin: 0;
+  overflow: hidden;
   border: 0;
 }
 
 .djn-tbody.djn-item-dragging {
   display: none !important;
 }
-
 .djn-tbody.ui-sortable-placeholder td {
   background: #fbfad0;
 }
@@ -117,42 +105,36 @@
 #grp-content .grp-tabular .grp-table .grp-tbody {
   .grp-th,
   .grp-td {
-    overflow: visible;
     vertical-align: top;
+    overflow: visible;
   }
-
   .grp-tr > td.original:first-child {
     width: 0;
     padding: 0;
-    background: #eee;
     border: 0;
+    background: #eee;
   }
-
   .grp-tr.djn-has-inlines .grp-td {
     border-bottom: 0 !important;
   }
 }
-
 #grp-content .grp-tabular .grp-table .grp-thead .grp-th {
-  font-weight: bold;
-  line-height: 16px;
-  color: #aaa;
-
+  border-radius: 0;
   border-top: 0;
   border-bottom: 0;
-  border-radius: 0;
+  line-height: 16px;
+  color: #aaa;
+  font-weight: bold;
 }
 
 #grp-content table.djn-table thead > tr > th {
   font-size: 11px;
   line-height: inherit;
 }
-
 #grp-content .grp-tabular .grp-table.djn-table .grp-thead > .grp-tr > .grp-th {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-
 #grp-content
   .grp-tabular
   .grp-table.djn-table
@@ -175,11 +157,9 @@ table.djn-table.grp-table td div.grp-readonly,
 table.djn-table.grp-table th div.grp-readonly {
   margin: 0 !important;
 }
-
 .grp-tabular.djn-tabular td.grp-td ul.errorlist {
   margin: 0 !important;
 }
-
 table.djn-table.grp-table td div.grp-readonly:empty,
 table.djn-table.grp-table th div.grp-readonly:empty {
   margin-bottom: -5px !important;
@@ -197,7 +177,6 @@ table.djn-table.grp-table td > textarea,
 table.djn-table.grp-table th > textarea {
   margin: 0 !important;
 }
-
 // Grappelli is the absolute worst with !important
 table.djn-table.grp-table td > input[type="text"],
 table.djn-table.grp-table td > input[type="password"],
@@ -223,9 +202,9 @@ table.djn-table.grp-table th p input[type="url"],
 table.djn-table.grp-table th p input[type="email"],
 table.djn-table.grp-table th p input[type="number"],
 table.djn-table.grp-table th p > input[type="button"] {
+  vertical-align: middle;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  vertical-align: middle;
 }
 
 .djn-empty-form {
@@ -240,7 +219,6 @@ table.djn-table.grp-table th p > input[type="button"] {
   .inline-group .tabular .ui-sortable-placeholder tr.has_original td {
     padding: 1px;
   }
-
   .inline-group.djn-group ul.tools {
     height: 0;
   }
@@ -255,39 +233,32 @@ table.djn-table.grp-table th p > input[type="button"] {
 
   td.original {
     width: 0;
-    padding: 2px 0 0;
+    padding: 2px 0 0 0;
   }
 
   td.original.is-sortable {
     position: relative;
     width: 15px;
   }
-
   td.original.is-sortable .djn-drag-handler {
-    @include cursor(grab);
-
-    cursor: move;
-
     position: absolute;
     top: 4px;
     left: 0;
-
     display: block;
-
     width: 10px;
     height: 20px;
     margin: 5px;
-
+    cursor: move;
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAyCAYAAABcfPsmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNrs0zEKACAMBEEDST6X9+Z92lpYHNgI7naBK9KMdfcch6rK9lvdeWYOJXXnESEN1d2HH9J9hhSkEFKQQkhBClKQghSkPNYSYADFZiuygfao+AAAAABJRU5ErkJggg==")
       no-repeat top left;
     background-size: 10px 25px;
+    @include cursor(grab);
   }
 
   // (Optional) Apply a "closed-hand" cursor during drag operation.
   td.original.is-sortable .djn-drag-handler:active {
     @include cursor(grabbing);
   }
-
   td.original.is-sortable p + .djn-drag-handler {
     top: 20px;
   }
@@ -308,26 +279,21 @@ table.djn-table.grp-table th p > input[type="button"] {
   .grp-tools {
     overflow: visible;
   }
-
   .grp-tools li {
     float: none;
   }
-
   .grp-tools li:first-child,
   .grp-tools li:last-child {
     padding: 4px 8px;
   }
-
   .grp-tools a {
     width: auto;
     height: auto;
   }
-
   .grp-tools > li > a {
     min-width: 24px;
     min-height: 24px;
   }
-
   .grp-tools .polymorphic-type-menu {
     right: 0.5em;
     left: auto;
@@ -338,7 +304,6 @@ table.djn-table.grp-table th p > input[type="button"] {
   top: 0;
   margin: 0;
 }
-
 .grp-td > .grp-related-widget-wrapper .grp-related-widget-tools {
   overflow: visible;
   display: flex;
@@ -350,14 +315,14 @@ table.djn-table.grp-table th p > input[type="button"] {
 }
 
 #grp-content .grp-group > .grp-items > .grp-module > .grp-tabular {
-  margin-bottom: 5px;
   background: #fff;
   border: 2px solid #ccc;
+  margin-bottom: 5px;
 
   &::after {
     content: "";
-    clear: both;
     display: block;
+    clear: both;
   }
 }
 
@@ -387,9 +352,9 @@ table.grp-table.djn-table th.djn-th p input[type="email"],
 table.grp-table.djn-table th.djn-th p input[type="number"],
 table.grp-table.djn-table th.djn-th p > input[type="button"],
 table.grp-table.djn-table th.djn-th div.grp-related-widget-wrapper {
+  vertical-align: baseline;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  vertical-align: baseline;
 }
 
 table.grp-table.djn-table td.djn-td a.fb_show,

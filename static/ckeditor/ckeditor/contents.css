@@ -2,185 +2,21 @@
 Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 */
-html[data-theme="light"]{
-    --primary: #79aec8;
-    --secondary: #417690;
-    --accent: #f5dd5d;
-    --primary-fg: #fff;
-    --body-fg: #333;
-    --body-bg: #fff;
-    --body-quiet-color: #666;
-    --body-loud-color: #000;
-    --header-color: #ffc;
-    --header-branding-color: var(--accent);
-    --header-bg: var(--secondary);
-    --header-link-color: var(--primary-fg);
-    --breadcrumbs-fg: #c4dce8;
-    --breadcrumbs-link-fg: var(--body-bg);
-    --breadcrumbs-bg: #264b5d;
-    --link-fg: #417893;
-    --link-hover-color: #036;
-    --link-selected-fg: var(--secondary);
-    --hairline-color: #e8e8e8;
-    --border-color: #ccc;
-    --error-fg: #ba2121;
-    --message-success-bg: #dfd;
-    --message-warning-bg: #ffc;
-    --message-error-bg: #ffefef;
-    --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
-    --selected-bg: #e4e4e4; /* E.g. selected table cells */
-    --selected-row: #ffc;
-    --button-fg: #fff;
-    --button-bg: var(--secondary);
-    --button-hover-bg: #205067;
-    --default-button-bg: #205067;
-    --default-button-hover-bg: var(--secondary);
-    --close-button-bg: #747474;
-    --close-button-hover-bg: #333;
-    --delete-button-bg: #ba2121;
-    --delete-button-hover-bg: #a41515;
-    --object-tools-fg: var(--button-fg);
-    --object-tools-bg: var(--close-button-bg);
-    --object-tools-hover-bg: var(--close-button-hover-bg);
-    --font-family-primary:
-        "Segoe UI",
-        system-ui,
-        roboto,
-        "Helvetica Neue",
-        arial,
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --font-family-monospace:
-        ui-monospace,
-        menlo,
-        monaco,
-        "Cascadia Mono",
-        "Segoe UI Mono",
-        "Roboto Mono",
-        "Oxygen Mono",
-        "Ubuntu Monospace",
-        "Source Code Pro",
-        "Fira Mono",
-        "Droid Sans Mono",
-        "Courier New",
-        monospace,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji";
-}
-
-html[data-theme="dark"]{
-    --primary: #79aec8;
-    --secondary: #417690;
-    --accent: #f5dd5d;
-    --primary-fg: #fff;
-    --body-fg: #333;
-    --body-bg: #fff;
-    --body-quiet-color: #666;
-    --body-loud-color: #000;
-    --header-color: #ffc;
-    --header-branding-color: var(--accent);
-    --header-bg: var(--secondary);
-    --header-link-color: var(--primary-fg);
-    --breadcrumbs-fg: #c4dce8;
-    --breadcrumbs-link-fg: var(--body-bg);
-    --breadcrumbs-bg: #264b5d;
-    --link-fg: #417893;
-    --link-hover-color: #036;
-    --link-selected-fg: var(--secondary);
-    --hairline-color: #e8e8e8;
-    --border-color: #ccc;
-    --error-fg: #ba2121;
-    --message-success-bg: #dfd;
-    --message-warning-bg: #ffc;
-    --message-error-bg: #ffefef;
-    --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
-    --selected-bg: #e4e4e4; /* E.g. selected table cells */
-    --selected-row: #ffc;
-    --button-fg: #fff;
-    --button-bg: var(--secondary);
-    --button-hover-bg: #205067;
-    --default-button-bg: #205067;
-    --default-button-hover-bg: var(--secondary);
-    --close-button-bg: #747474;
-    --close-button-hover-bg: #333;
-    --delete-button-bg: #ba2121;
-    --delete-button-hover-bg: #a41515;
-    --object-tools-fg: var(--button-fg);
-    --object-tools-bg: var(--close-button-bg);
-    --object-tools-hover-bg: var(--close-button-hover-bg);
-    --font-family-primary:
-        "Segoe UI",
-        system-ui,
-        roboto,
-        "Helvetica Neue",
-        arial,
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --font-family-monospace:
-        ui-monospace,
-        menlo,
-        monaco,
-        "Cascadia Mono",
-        "Segoe UI Mono",
-        "Roboto Mono",
-        "Oxygen Mono",
-        "Ubuntu Monospace",
-        "Source Code Pro",
-        "Fira Mono",
-        "Droid Sans Mono",
-        "Courier New",
-        monospace,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji";
-	--primary: #264b5d;
-	--primary-fg: #f7f7f7;
-	--body-fg: #eee;
-	--body-bg: #121212;
-	--body-quiet-color: #e0e0e0;
-	--body-loud-color: #fff;
-	--breadcrumbs-link-fg: #e0e0e0;
-	--breadcrumbs-bg: var(--primary);
-	--link-fg: #81d4fa;
-	--link-hover-color: #4ac1f7;
-	--link-selected-fg: #6f94c6;
-	--hairline-color: #272727;
-	--border-color: #353535;
-	--error-fg: #e35f5f;
-	--message-success-bg: #006b1b;
-	--message-warning-bg: #583305;
-	--message-error-bg: #570808;
-	--darkened-bg: #212121;
-	--selected-bg: #1b1b1b;
-	--selected-row: #00363a;
-	--close-button-bg: #333;
-	--close-button-hover-bg: #666;
-}
 
 body
 {
-	margin: 20px;
-
 	/* Font */
-
 	/* Emoji fonts are added to visualise them nicely in Internet Explorer. */
 	font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 12px;
 
 	/* Text color */
-	color: var(--body-fg);
+	color: #333;
 
 	/* Remove the background color to make it transparent. */
-	background-color: var(--body-bg);
+	background-color: #fff;
+
+	margin: 20px;
 }
 
 .cke_editable
@@ -194,27 +30,25 @@ body
 
 blockquote
 {
-	padding: 2px 0;
-
-	font-family: Georgia, Times, "Times New Roman", serif;
 	font-style: italic;
-
-	border-color: #ccc;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
 	border-style: solid;
+	border-color: #ccc;
 	border-width: 0;
 }
 
 .cke_contents_ltr blockquote
 {
-	padding-right: 8px;
 	padding-left: 20px;
+	padding-right: 8px;
 	border-left-width: 5px;
 }
 
 .cke_contents_rtl blockquote
 {
-	padding-right: 20px;
 	padding-left: 8px;
+	padding-right: 20px;
 	border-right-width: 5px;
 }
 
@@ -226,9 +60,8 @@ a
 ol,ul,dl
 {
 	/* IE7: reset rtl list margin. (#7334) */
-	*margin-right: 0;
-
-	/* Preserved spaces for list items with text direction different than the list. (#6249,#8049) */
+	*margin-right: 0px;
+	/* Preserved spaces for list items with text direction different than the list. (#6249,#8049)*/
 	padding: 0 40px;
 }
 
@@ -240,36 +73,37 @@ h1,h2,h3,h4,h5,h6
 
 hr
 {
-	border: 0;
+	border: 0px;
 	border-top: 1px solid #ccc;
 }
 
 img.right
 {
+	border: 1px solid #ccc;
 	float: right;
 	margin-left: 15px;
 	padding: 5px;
-	border: 1px solid #ccc;
 }
 
 img.left
 {
+	border: 1px solid #ccc;
 	float: left;
 	margin-right: 15px;
 	padding: 5px;
-	border: 1px solid #ccc;
 }
 
 pre
 {
-	word-wrap: break-word; /* IE7 */
-	tab-size: 4;
 	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 
 .marker
 {
-	background-color: yellow;
+	background-color: Yellow;
 }
 
 span[lang]
@@ -279,26 +113,23 @@ span[lang]
 
 figure
 {
-	display: inline-block;
-
-	margin: 10px 20px;
-	padding: 10px;
-
 	text-align: center;
-
-	background: rgb(0 0 0 / 5%);
 	outline: solid 1px #ccc;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 10px 20px;
+	display: inline-block;
 }
 
 figure > figcaption
 {
-	display: block; /* For IE8 */
 	text-align: center;
+	display: block; /* For IE8 */
 }
 
 a > img {
-	margin: 1px;
 	padding: 1px;
+	margin: 1px;
 	border: none;
 	outline: 1px solid #0782C1;
 }
@@ -311,17 +142,17 @@ a > img {
 
 .math-featured
 {
-	margin: 10px;
 	padding: 20px;
-	background-color: rgb(255 0 0 / 5%);
-	box-shadow: 0 0 2px rgb(200 0 0 / 100%);
+	box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+	background-color: rgba(255, 0, 0, 0.05);
+	margin: 10px;
 }
 
 .image-clean
 {
-	padding: 0;
-	background: none;
 	border: 0;
+	background: none;
+	padding: 0;
 }
 
 .image-clean > figcaption
@@ -332,8 +163,8 @@ a > img {
 
 .image-grayscale
 {
-	color: #666;
 	background-color: white;
+	color: #666;
 }
 
 .image-grayscale img, img.image-grayscale

@@ -1,0 +1,107 @@
+@import '../bootstrap/bootstrap';
+@import '../bootstrap/_offcanvas';
+@import '../bootstrap/_navbar';
+
+:root[data-bs-theme="light"] {
+    --nav-item-filter: brightness(0) saturate(100%) opacity(0.65);
+    --nav-item-hover-filter: brightness(0) saturate(100%) opacity(0.8);
+}
+  
+  :root[data-bs-theme="dark"] {
+    --nav-item-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6136%) hue-rotate(8deg) brightness(127%) contrast(112%) opacity(0.65);
+    --nav-item-hover-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6136%) hue-rotate(8deg) brightness(127%) contrast(112%) opacity(0.8);
+}
+
+.header {
+    @extend .container;
+    @extend .py-2;
+
+    .navbar {
+        @extend .navbar-expand-lg;
+        @extend .container-fluid;
+        
+        .navbar__container{
+            @extend .container-fluid;
+
+            .navbar__brand{
+                @extend .navbar-brand;
+                filter: var(--nav-item-filter);
+                
+            }
+            .navbar__toggler{
+                @extend .navbar-toggler;
+    
+    
+                span {
+                    @extend .navbar-toggler-icon;
+                }
+            }
+    
+            .offcanvas {
+    
+                @extend .container-fluid;
+                @extend .offcanvas;
+                @extend .w-100;
+                @extend .offcanvas-end;
+    
+    
+    
+                .offcanvas__header{
+                    @extend .offcanvas-header;
+    
+    
+                    .offcanvas__brand{
+                        @extend .navbar-brand;
+                    }
+                    .offcanvas__close-btn{
+                        @extend .btn-close;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                .offcanvas__body {
+                    @extend .offcanvas-body;
+                    @extend .align-items-center;
+                    
+                    .nav {
+                        @extend .navbar-nav;
+                        @extend .justify-content-end;
+                        @extend .align-items-lg-center;
+                        @extend .flex-grow-1;
+    
+                        .nav__item{
+                            @extend .nav-item;
+                            @extend .px-2;
+    
+                            .nav__link{
+                                @extend .nav-link;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+
+
+
+    }
+
+}
+
+.main {
+    @extend .container;
+    @extend .d-flex;
+    @extend .justify-content-center;
+}
+
+.footer {
+    @extend .container;
+    @extend .py-3;
+    @extend .my-4;
+    @extend .border-top;
+    @extend .text-center;
+    @extend .text-muted;
+
+}

@@ -29,10 +29,12 @@ CKEDITOR.dialog.add('htmleditorDialog', function(editor) {
         // This method is invoked once a user clicks the OK button, confirming the dialog.
         onOk: function() {
           debugger;
+
+          markup_val = this.getContentElement('htmleditor', 'markup').getValue();
           editor.insertHtml(`
           <div class='html-editor'>
-            <textarea class="form-control" spellcheck="false"><pre><code class="language-html">123</code></pre></textarea>
-            <iframe src=""></iframe> 
+            <textarea class="form-control" spellcheck="false" wrap="off">${markup_val}</textarea>
+            <iframe src="" class="ratio"></iframe> 
           </div>
           `);
         }

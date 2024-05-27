@@ -1,6 +1,6 @@
-/* !***********************************************************************************************************************************************************************************************************************!*\
+/*!***********************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./nested_admin/static/nested_admin/src/nested_admin.scss ***!
-  \  ***********************************************************************************************************************************************************************************************************************/
+  \***********************************************************************************************************************************************************************************************************************/
 /* stylelint-disable no-descending-specificity */
 .djn-group .djn-group-nested {
   float: none;
@@ -21,17 +21,13 @@
 .djn-group-nested .djn-items .inline-related {
   border: 1px solid transparent;
   border-radius: 4px; }
-
   #grp-content .djn-group-nested .djn-items .inline-related {
     margin-bottom: 5px;
     border: 1px solid #a7a7a7; }
-
     #grp-content .djn-group-nested .djn-items .inline-related.djn-item-dragging {
       border: 0; }
-
   .djn-group-nested .djn-items .inline-related:first-child {
     margin-top: 0; }
-
   .djn-group-nested .djn-items .inline-related.last-related {
     margin-bottom: 0; }
 
@@ -52,32 +48,28 @@
 
 .djn-items {
   position: relative;
-  overflow: visible;
-  min-height: 0; }
+  min-height: 0;
+  overflow: visible; }
 
 .djn-item {
   overflow: visible; }
 
 .djn-item.djn-no-drag:first-child {
   position: absolute;
-  z-index: -1;
   top: 0;
   right: 0;
   left: 0;
-
+  z-index: -1;
   height: 19px; }
-
   .djn-item.djn-no-drag:first-child + .djn-item.ui-sortable-helper,
   .djn-item.djn-no-drag:first-child + .djn-item-dragging {
     margin-top: 0; }
 
 .djn-item-dragging {
-  overflow: hidden;
-
   height: 0;
-  margin: 0;
   padding: 0;
-
+  margin: 0;
+  overflow: hidden;
   border: 0; }
 
 .djn-tbody.djn-item-dragging {
@@ -91,26 +83,25 @@
 
 #grp-content .grp-tabular .grp-table .grp-tbody .grp-th,
 #grp-content .grp-tabular .grp-table .grp-tbody .grp-td {
-  overflow: visible;
-  vertical-align: top; }
+  vertical-align: top;
+  overflow: visible; }
 
 #grp-content .grp-tabular .grp-table .grp-tbody .grp-tr > td.original:first-child {
   width: 0;
   padding: 0;
-  background: #eee;
-  border: 0; }
+  border: 0;
+  background: #eee; }
 
 #grp-content .grp-tabular .grp-table .grp-tbody .grp-tr.djn-has-inlines .grp-td {
   border-bottom: 0 !important; }
 
 #grp-content .grp-tabular .grp-table .grp-thead .grp-th {
-  font-weight: bold;
-  line-height: 16px;
-  color: #aaa;
-
+  border-radius: 0;
   border-top: 0;
   border-bottom: 0;
-  border-radius: 0; }
+  line-height: 16px;
+  color: #aaa;
+  font-weight: bold; }
 
 #grp-content table.djn-table thead > tr > th {
   font-size: 11px;
@@ -182,9 +173,9 @@ table.djn-table.grp-table th p input[type="url"],
 table.djn-table.grp-table th p input[type="email"],
 table.djn-table.grp-table th p input[type="number"],
 table.djn-table.grp-table th p > input[type="button"] {
+  vertical-align: middle;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  vertical-align: middle; }
+  margin-bottom: 0 !important; }
 
 .djn-empty-form,
 .djn-empty-form * {
@@ -204,40 +195,36 @@ table.djn-table.grp-table th p > input[type="button"] {
 
 #content.colM td.original {
   width: 0;
-  padding: 2px 0 0; }
+  padding: 2px 0 0 0; }
 
 #content.colM td.original.is-sortable {
   position: relative;
   width: 15px; }
 
 #content.colM td.original.is-sortable .djn-drag-handler {
-  cursor: move;
-  cursor: grab;
-  cursor: grab;
-  cursor: -moz- grab;
-  cursor: -moz- grab;
-  cursor: -webkit- grab;
-  cursor: -webkit- grab;
-
   position: absolute;
   top: 4px;
   left: 0;
-
   display: block;
-
   width: 10px;
   height: 20px;
   margin: 5px;
-
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAyCAYAAABcfPsmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNrs0zEKACAMBEEDST6X9+Z92lpYHNgI7naBK9KMdfcch6rK9lvdeWYOJXXnESEN1d2HH9J9hhSkEFKQQkhBClKQghSkPNYSYADFZiuygfao+AAAAABJRU5ErkJggg==") no-repeat top left;
-  background-size: 10px 25px; }
+  cursor: move;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAyCAYAAABcfPsmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNrs0zEKACAMBEEDST6X9+Z92lpYHNgI7naBK9KMdfcch6rK9lvdeWYOJXXnESEN1d2HH9J9hhSkEFKQQkhBClKQghSkPNYSYADFZiuygfao+AAAAABJRU5ErkJggg==) no-repeat top left;
+  background-size: 10px 25px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  cursor: -moz- -webkit-grab;
+  cursor: -moz- grab;
+  cursor: -webkit- -webkit-grab;
+  cursor: -webkit- grab; }
 
 #content.colM td.original.is-sortable .djn-drag-handler:active {
+  cursor: -webkit-grabbing;
   cursor: grabbing;
-  cursor: grabbing;
+  cursor: -moz- -webkit-grabbing;
   cursor: -moz- grabbing;
-  cursor: -moz- grabbing;
-  cursor: -webkit- grabbing;
+  cursor: -webkit- -webkit-grabbing;
   cursor: -webkit- grabbing; }
 
 #content.colM td.original.is-sortable p + .djn-drag-handler {
@@ -280,8 +267,8 @@ table.djn-table.grp-table th p > input[type="button"] {
 .grp-td > .grp-related-widget-wrapper .grp-related-widget-tools {
   overflow: visible;
   display: -webkit-box;
-  display: flex;
-  display: flexbox;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .select2-container + .grp-tools.grp-related-widget-tools {
@@ -289,14 +276,13 @@ table.djn-table.grp-table th p > input[type="button"] {
   right: 0; }
 
 #grp-content .grp-group > .grp-items > .grp-module > .grp-tabular {
-  margin-bottom: 5px;
   background: #fff;
-  border: 2px solid #ccc; }
-
+  border: 2px solid #ccc;
+  margin-bottom: 5px; }
   #grp-content .grp-group > .grp-items > .grp-module > .grp-tabular::after {
     content: "";
-    clear: both;
-    display: block; }
+    display: block;
+    clear: both; }
 
 table.grp-table.djn-table td.djn-td > input[type="text"],
 table.grp-table.djn-table td.djn-td > input[type="password"],
@@ -324,9 +310,9 @@ table.grp-table.djn-table th.djn-th p input[type="email"],
 table.grp-table.djn-table th.djn-th p input[type="number"],
 table.grp-table.djn-table th.djn-th p > input[type="button"],
 table.grp-table.djn-table th.djn-th div.grp-related-widget-wrapper {
+  vertical-align: baseline;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  vertical-align: baseline; }
+  margin-bottom: 0 !important; }
 
 table.grp-table.djn-table td.djn-td a.fb_show,
 table.grp-table.djn-table td.djn-td a.related-lookup,
@@ -356,3 +342,6 @@ table.grp-table.djn-table th.djn-th > select,
 table.grp-table.djn-table th.djn-th p input[type="text"] {
   margin-top: 0 !important;
   margin-bottom: 0 !important; }
+
+
+/*# sourceMappingURL=nested_admin.css.map*/
