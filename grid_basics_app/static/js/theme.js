@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function(){
     prev = window.localStorage.getItem('data-bs-theme');
-    var isOn = prev ? (prev == 'dark' ? true : false) : true;
+    var isOn = prev ? (prev == 'dark' ? true : false) : false;
 
     if (prev != null){
         document.documentElement.setAttribute('data-bs-theme', prev)

@@ -36,16 +36,35 @@ pre::before, .html-editor::before{
     color: var(--code-header);
     background-color: var(--code-border);
 }
-pre:has(code.language-html)::before {
-    content: "html";
-}
+
 .html-editor{
-    margin-bottom: 1rem;
+    height: 600px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/* .html-editor::before{
+    content: "HTML Editor";
+    flex-grow: 1
+    
+} */
+.html-editor textarea {
+    resize: none;
+    text-wrap: nowrap;
+    word-break: break-all;
+    overflow: scroll;
+}
+.html-editor iframe {
+    background-color: var(--bs-body-bg);
 }
 /* .html-editor::before {
     content: "html редактор";
     font-size: 14px;
 } */
+pre:has(code.language-html)::before {
+    content: "html";
+}
 pre:has(code.language-css)::before {
     content: "css";
 }

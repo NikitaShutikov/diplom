@@ -11,7 +11,7 @@
 		<!-- Scrollspy -->
 		<nav id="navbar-theory" class="sticky-top py-5 px-3 mx-2">
 			<ul class="nav nav-pills flex-column nav-justified">
-				<span class="fs-4 my-4 px-3">Пособие</span>
+				<span class="fs-4 fw-medium my-3 px-3">Пособие</span>
 				{% for chap in chapters %}
 				<li>
 					<a class="nav-link {% if request.resolver_match.kwargs.chapter_url_name  == chap.url_name %}active{% endif %}" href="/chapters/{{chap.url_name}}">{{chap.name}}</a>

@@ -32,9 +32,9 @@ CKEDITOR.dialog.add('htmleditorDialog', function(editor) {
 
           markup_val = this.getContentElement('htmleditor', 'markup').getValue();
           editor.insertHtml(`
-          <div class='html-editor d-flex flex-wrap flex-lg-nowrap gap-3 gap-lg-0'>
-            <textarea class="form-control language-html" spellcheck="false">${markup_val}</textarea>
-            <iframe sandbox="allow-scripts" class="ratio border border-dark-subtle" src=""></iframe> 
+          <div class='html-editor'>
+            <textarea class="form-control" spellcheck="false" wrap="off">${markup_val}</textarea>
+            <iframe src="" class="ratio"></iframe> 
           </div>
           `);
         }
