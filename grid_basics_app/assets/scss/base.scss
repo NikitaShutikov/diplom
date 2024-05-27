@@ -52,6 +52,7 @@
     
                     .offcanvas__brand{
                         @extend .navbar-brand;
+                        filter: var(--nav-item-filter);
                     }
                     .offcanvas__close-btn{
                         @extend .btn-close;
@@ -75,6 +76,10 @@
     
                             .nav__link{
                                 @extend .nav-link;
+                            }
+                            .theme-toggle{
+                                @extend .btn;
+                                filter: var(--nav-item-filter);
                             }
                         }
                     }

@@ -1,5 +1,27 @@
 
-
 body {
-    content: "hello world";
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
+
+    .main {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+
+        #carousel {
+            display: flex;
+
+            .carousel-inner{
+                display: flex;
+                min-height: 400px;
+                align-items: center;
+            }
+
+            .carousel-control-next-icon, .carousel-control-prev-icon {
+                filter: var(--nav-item-filter);
+            }
+        }
+    }
 }

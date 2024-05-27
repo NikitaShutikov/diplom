@@ -1,0 +1,51 @@
+@import '../bootstrap/bootstrap';
+main img {
+    @extend .img-fluid;
+}
+
+pre, textarea {
+
+    color: var(--bs-code-color);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0 !important;
+}
+pre, .html-editor {
+    &::before{
+        padding: 0.1em 1.5em;
+        display: block;
+        width: 100%;
+        color: var(--bs-body-color);
+        background-color: var(--bs-border-color);
+        font-size: 12.25px;;
+        line-height: $line-height-sm;
+
+    }
+    &:has(code.language-html)::before{
+        content: "HTML";
+    }
+    &:has(code.language-css)::before{
+        content: "CSS";
+    }
+    &.html-editor::before{
+        content: "HTML";
+    }
+}
+code, textarea {
+    @extend .p-3;
+    display: block;
+    border-left: 3px solid var(--bs-code-color) !important;
+    color: var(--bs-code-color) !important;
+
+}
+
+.pagination{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .page-item{
+        flex: 1;
+        button{
+            width: 100%;
+        }
+    }
+}
