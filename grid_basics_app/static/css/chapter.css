@@ -7328,7 +7328,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .main {
+.d-flex, .html-editor, .main {
   display: flex !important;
 }
 
@@ -7730,7 +7730,7 @@ textarea.form-control-lg {
   flex-shrink: 1 !important;
 }
 
-.flex-wrap {
+.flex-wrap, .html-editor {
   flex-wrap: wrap !important;
 }
 
@@ -12963,13 +12963,20 @@ textarea.form-control-lg {
   filter: var(--nav-item-filter);
 }
 
-pre, textarea {
+pre, textarea, iframe {
   color: var(--bs-code-color);
   border: 1px solid var(--bs-border-color);
   border-radius: 0 !important;
+  resize: none;
+}
+
+iframe #document html {
+  background-color: var(--bs-body-bg);
 }
 
 pre::before, .html-editor::before {
+  height: -moz-min-content;
+  height: min-content;
   padding: 0.1em 1.5em;
   display: block;
   width: 100%;
@@ -12992,6 +12999,23 @@ code, textarea {
   display: block;
   border-left: 3px solid var(--bs-code-color) !important;
   color: var(--bs-code-color) !important;
+}
+
+.html-editor {
+  border: 1px solid var(--bs-border-color);
+}
+.html-editor::before {
+  flex-grow: 1;
+}
+.html-editor * {
+  flex: 1;
+  height: 500px;
+  display: block;
+}
+@media (max-width: 767.98px) {
+  .html-editor * {
+    flex-basis: 100%;
+  }
 }
 
 .pagination {
