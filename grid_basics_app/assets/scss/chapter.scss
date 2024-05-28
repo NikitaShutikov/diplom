@@ -1,4 +1,5 @@
-@import '../bootstrap/bootstrap';
+@import 'base';
+
 main img {
     @extend .img-fluid;
 }
@@ -67,9 +68,7 @@ code, textarea {
         }
     }
     li{
-        :hover{
-            @extend .opacity-75;
-        }
+
     }
     .nav-link {
         @extend .nav-link;
