@@ -49,3 +49,32 @@ code, textarea {
         }
     }
 }
+.sidebar{
+    @extend .sidebar;
+
+    .sidebar__header{
+        @extend .my-3;
+    
+        @extend .gap-2;
+        display: flex;
+        align-items: center;
+        filter: var(--nav-item-filter);
+        svg {
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    li{
+        :hover{
+            @extend .opacity-75;
+        }
+    }
+    .nav-link {
+        @extend .nav-link;
+
+
+
+    }
+}
