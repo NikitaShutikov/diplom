@@ -15,6 +15,7 @@ iframe #document html {
     background-color: var(--bs-body-bg);
 }
 pre, .html-editor {
+    @extend .mb-3;
     &::before{
         height: min-content;
         padding: 0.1em 1.5em;
@@ -46,8 +47,7 @@ code, textarea {
 .html-editor{
     @extend .d-flex;
     @extend .flex-wrap;
-
-
+    position: relative;
     border: 1px solid var(--bs-border-color);
     &::before {
         flex-grow: 1;
@@ -61,7 +61,20 @@ code, textarea {
             flex-basis: 100%;
         }
     }
-
+    button {
+        @extend .m-3;
+        @extend .btn;
+  
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: center no-repeat url('/static/media/box-arrow-up-right.svg');
+        background-size: 24px;
+        filter: var(--nav-item-filter);
+        
+    }
 
 
 }
