@@ -7,7 +7,6 @@ function updateIframe(textarea, iframe)
     return false;
 }
 function openInNewWindow(textarea){
-    debugger;
     var win = window.open("", "Example", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width="+screen.availWidth+",height="+screen.availHeight);
     win.document.body.innerHTML = textarea.value;
 }
