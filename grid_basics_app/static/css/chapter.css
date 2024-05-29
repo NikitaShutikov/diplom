@@ -13043,6 +13043,7 @@ code, textarea {
   }
 }
 .html-editor button {
+  display: block;
   width: 34px;
   height: 34px;
   position: absolute;
@@ -13050,7 +13051,7 @@ code, textarea {
   right: 0;
   background: center no-repeat url("/static/media/box-arrow-up-right.svg");
   background-size: 24px;
-  filter: var(--nav-item-filter);
+  filter: invert(30%) sepia(75%) saturate(4670%) hue-rotate(212deg) brightness(103%) contrast(95%);
 }
 
 .pagination {
