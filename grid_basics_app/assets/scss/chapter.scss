@@ -50,6 +50,8 @@ code, textarea {
     @extend .flex-wrap;
     position: relative;
     border: 1px solid var(--bs-border-color);
+    background-color: var(--bs-body-bg);
+    
     &::before {
         flex-grow: 1;
     }
@@ -57,7 +59,6 @@ code, textarea {
         flex:1;
         height: 500px;
         display: block;
-
         @include media-breakpoint-down(md) {
             flex-basis: 100%;
         }

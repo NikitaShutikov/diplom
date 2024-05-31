@@ -13028,6 +13028,7 @@ code, textarea {
 .html-editor {
   position: relative;
   border: 1px solid var(--bs-border-color);
+  background-color: var(--bs-body-bg);
 }
 .html-editor::before {
   flex-grow: 1;

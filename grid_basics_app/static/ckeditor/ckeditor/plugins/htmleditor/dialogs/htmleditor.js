@@ -34,7 +34,7 @@ CKEDITOR.dialog.add('htmleditorDialog', function(editor) {
           editor.insertHtml(`
           <div class='html-editor'>
             <textarea class="form-control" spellcheck="false" wrap="off">${markup_val}</textarea>
-            <iframe src="" class="ratio"></iframe> 
+            <iframe src="" class="ratio" allowtransparency="true"></iframe> 
           </div>
           `);
         }

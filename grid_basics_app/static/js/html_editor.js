@@ -10,6 +10,10 @@ function openInNewWindow(textarea){
     var win = window.open("", "Example", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width="+screen.availWidth+",height="+screen.availHeight);
     win.document.body.innerHTML = textarea.value;
 }
+function setBackgroundColor(iframe, color){
+    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDocument.body.style.backgroundColor = color;
+}
 document.addEventListener("DOMContentLoaded", function(){
 
     let editors = document.getElementsByClassName('html-editor');
@@ -17,6 +21,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let textarea = e.children[0];
         let iframe = e.children[1];
+        //Установка заднего фона для iframe
+
+        // iframe.onload = function() {
+        //     setBackgroundColor(iframe, window.getComputedStyle(e).backgroundColor);
+        // }
         //Событие на ввод
         textarea.addEventListener('input', function() { updateIframe(textarea, iframe) } );
         //Разрешаем ввод символов табуляции
