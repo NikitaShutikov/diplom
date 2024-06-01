@@ -1,56 +1,79 @@
-function updateIframe(textarea, iframe)
+
+import './ace/ace.js';
+import './ace/ext-language_tools.js';
+import './ace/mode-html.js';
+import './ace/snippets/html.js';
+
+
+function updateIframe(editor, iframe)
 {
+
     iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
     iframe.document.open();
-    iframe.document.write(textarea.value);
+    iframe.document.write(editor.getValue());
     iframe.document.close();
     return false;
 }
-function openInNewWindow(textarea){
+function openInNewWindow(editor){
     var win = window.open("", "Example", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width="+screen.availWidth+",height="+screen.availHeight);
-    win.document.body.innerHTML = textarea.value;
+    win.document.body.innerHTML = editor.getValue();
 }
-function setBackgroundColor(iframe, color){
-    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    iframeDocument.body.style.backgroundColor = color;
-}
+
 document.addEventListener("DOMContentLoaded", function(){
 
-    let editors = document.getElementsByClassName('html-editor');
-    for (let e of editors){
+    for (let s of document.getElementsByTagName('code')) {
+        let editor = ace.edit(s);
 
-        let textarea = e.children[0];
-        let iframe = e.children[1];
-        //Установка заднего фона для iframe
+        if (s.classList.contains('editor')){
+            editor.setOptions({
+                useWorker: false,
+                fontSize: "12pt",
+                enableBasicAutocompletion: true,
+                enableSnippets: true,
+                enableLiveAutocompletion: true,
+                tabSize: 2,
+                highlightActiveLine: false,
+                highlightGutterLine: false,
+                showPrintMargin: false,
+                showGutter: false,
+            });
 
-        // iframe.onload = function() {
-        //     setBackgroundColor(iframe, window.getComputedStyle(e).backgroundColor);
-        // }
-        //Событие на ввод
-        textarea.addEventListener('input', function() { updateIframe(textarea, iframe) } );
-        //Разрешаем ввод символов табуляции
-        textarea.addEventListener('keydown', function(e) { 
-            if (e.key == 'Tab') {
-                e.preventDefault();
-                var start = this.selectionStart;
-                var end = this.selectionEnd;
-            
-                // set textarea value to: text before caret + tab + text after caret
-                this.value = this.value.substring(0, start) +
-                  "\t" + this.value.substring(end);
-            
-                // put caret at right position again
-                this.selectionStart =
-                  this.selectionEnd = start + 1;
-              }
-        });
-        updateIframe(textarea, iframe);
-        //Добавление кнопки открытия в новом окне
-        newWinBtn = document.createElement('button');
-        newWinBtn.addEventListener('click', function() { openInNewWindow(textarea); });
-        e.appendChild(newWinBtn);
+            let iframe = document.createElement('iframe');
+            s.parentElement.appendChild(iframe);
+            editor.getSession().on('change', function(){
+                updateIframe(editor, iframe)
+            });
+            updateIframe(editor, iframe);
 
-        // textarea.style.height = 0;
-        // textarea.style.height = textarea.scrollHeight + 'px';
+            let newWinBtn = document.createElement('button');
+            newWinBtn.addEventListener('click', function() { openInNewWindow(editor); });
+            s.parentElement.appendChild(newWinBtn);
+        }
+        else {
+            editor.setOptions({
+                useWorker: false,
+                fontSize: "12pt",
+                enableBasicAutocompletion: true,
+                enableSnippets: true,
+                enableLiveAutocompletion: true,
+                tabSize: 2,
+                readOnly: true,
+                maxLines: Infinity,
+                highlightActiveLine: false,
+                highlightGutterLine: false,
+                showPrintMargin: false,
+                showGutter: false,
+            });
+            editor.renderer.$cursorLayer.element.style.display = "none"
+        }
+        
+        if (s.classList.contains('language-html')){
+            editor.session.setMode('ace/mode/html');
+        }
+        else{
+            editor.session.setMode('ace/mode/css');
+        }
+
+
     }
 })
