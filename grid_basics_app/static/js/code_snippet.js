@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function(){
             editor.setOptions({
                 useWorker: false,
                 fontSize: "12pt",
+                autoScrollEditorIntoView: true,
+                animatedScroll: true,
                 enableBasicAutocompletion: true,
                 enableSnippets: true,
                 enableLiveAutocompletion: true,
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 highlightGutterLine: false,
                 showPrintMargin: false,
                 showGutter: false,
+                setShowPrintMargin: true,
             });
 
             let iframe = document.createElement('iframe');
@@ -63,10 +66,12 @@ document.addEventListener("DOMContentLoaded", function(){
                 highlightGutterLine: false,
                 showPrintMargin: false,
                 showGutter: false,
+                setShowPrintMargin: true,
             });
             editor.renderer.$cursorLayer.element.style.display = "none"
         }
-        
+        editor.renderer.setPadding(15);
+        editor.renderer.setScrollMargin(15, 15)
         if (s.classList.contains('language-html')){
             editor.session.setMode('ace/mode/html');
         }

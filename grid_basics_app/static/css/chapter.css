@@ -7898,7 +7898,7 @@ pre .btn-group-vertical > .btn-group:not(:first-child) > button,
   margin: 0.5rem !important;
 }
 
-.m-3, pre button, pre iframe, pre code {
+.m-3, pre button {
   margin: 1rem !important;
 }
 
@@ -13172,6 +13172,9 @@ pre {
   border: 1px solid var(--bs-border-color);
   overflow: hidden;
 }
+pre iframe, pre code {
+  margin: 0px !important;
+}
 pre code {
   display: block;
   flex: 1;
@@ -13196,25 +13199,6 @@ pre button {
   background: center no-repeat url("/static/media/box-arrow-up-right.svg");
   background-size: 24px;
   filter: invert(30%) sepia(75%) saturate(4670%) hue-rotate(212deg) brightness(103%) contrast(95%);
-}
-pre::before {
-  flex-grow: 1;
-  flex-basis: 100%;
-  height: -moz-min-content;
-  height: min-content;
-  padding: 0.3em 1.5em;
-  display: block;
-  width: 100%;
-  color: var(--bs-body-color);
-  background-color: var(--bs-border-color);
-  font-size: 12.25px;
-  line-height: 1.25;
-}
-pre:has(code.language-html)::before {
-  content: "HTML";
-}
-pre:has(code.language-css)::before {
-  content: "CSS";
 }
 
 .pagination {
