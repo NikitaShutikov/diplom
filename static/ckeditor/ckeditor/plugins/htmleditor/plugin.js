@@ -1,33 +1,33 @@
 ﻿CKEDITOR.plugins.add( 'htmleditor', {
-    icons: 'htmleditor',
+    icons: 'curlybraces',
     hidpi: true,
     lang: ['ru'],
     init: function( editor ) {
 
-        editor.addCommand('htmleditor', new CKEDITOR.dialogCommand('htmleditorDialog'), { allowedContent: true});
+        editor.addCommand('codepasting', new CKEDITOR.dialogCommand('codepastingDialog'), { allowedContent: true});
 
         editor.ui.addButton( 'HtmlEditor', {
             label: 'Вставить редактор',
-            command: 'htmleditor',
-            toolbar: 'htmleditor'
+            command: 'codepasting',
+            toolbar: 'codepasting'
         });
         
-        CKEDITOR.dialog.add('htmleditorDialog', this.path + 'dialogs/htmleditor.js');
+        CKEDITOR.dialog.add('codepastingDialog', this.path + 'dialogs/codepasting.js');
 
-        // add the context menu
-        if (editor.contextMenu) {
-            editor.addMenuGroup('htmleditorGroup');
-            editor.addMenuItem('htmleditorItem', {
-            label: 'HTML редактор',
-            icon: this.path + 'icons/htmleditor.png',
-            command: 'htmleditor',
-            group: 'htmleditorGroup'
-            });
+        // // add the context menu
+        // if (editor.contextMenu) {
+        //     editor.addMenuGroup('htmleditorGroup');
+        //     editor.addMenuItem('htmleditorItem', {
+        //     label: 'HTML редактор',
+        //     icon: this.path + 'icons/htmleditor.png',
+        //     command: 'codepasting',
+        //     group: 'htmleditorGroup'
+        //     });
     
-            editor.contextMenu.addListener(function(element) {
-                return {htmleditorItem: CKEDITOR.TRISTATE_OFF};
-            });
-        }
+        //     editor.contextMenu.addListener(function(element) {
+        //         return {htmleditorItem: CKEDITOR.TRISTATE_OFF};
+        //     });
+        // }
         // CKEDITOR.scriptLoader.load(scripts, function() {
         //     editor.getCommand('htmleditor').enable();
         // });

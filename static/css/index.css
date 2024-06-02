@@ -1,3 +1,22 @@
 body {
-  content: "hello world";
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+}
+body .main {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+body .main #carousel {
+  display: flex;
+}
+body .main #carousel .carousel-inner {
+  display: flex;
+  min-height: 400px;
+  align-items: center;
+}
+body .main #carousel .carousel-control-next-icon, body .main #carousel .carousel-control-prev-icon {
+  filter: var(--nav-item-filter);
 }/*# sourceMappingURL=index.css.map */

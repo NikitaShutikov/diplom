@@ -139,7 +139,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': [
             [
              '-', 'Format',
-             '-', 'Link', 'Unlink', 'CodeSnippet', 'HtmlEditor', 'Source',
+             '-', 'Link', 'Unlink', 'CodePasting', 'Source',
              '-', 'Image',
              '-', 'NumberedList', 'BulletedList'
             ],
@@ -150,7 +150,7 @@ CKEDITOR_CONFIGS = {
         },
         'extraPlugins': ','.join(
             [
-                'codesnippet', 'htmleditor', 'sourcedialog'
+                'codepasting', 'sourcedialog'
             ]),
         'width': '900px',
         'toolbarCanCollapse': False,

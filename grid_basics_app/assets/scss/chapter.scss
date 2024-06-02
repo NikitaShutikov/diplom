@@ -76,6 +76,7 @@ pre {
     flex-wrap: wrap;
     position: relative;
     border: 1px solid var(--bs-border-color);
+    overflow: hidden;
 
     iframe, code {
         @extend .m-3;
