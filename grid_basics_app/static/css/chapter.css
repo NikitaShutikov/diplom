@@ -2451,7 +2451,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, pre .btn-check[disabled] + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check[disabled] + .theme-toggle, .btn-check:disabled + .btn, pre .btn-check:disabled + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:disabled + .theme-toggle {
+.btn-check[disabled] + .btn, pre > .btn-check[disabled] + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check[disabled] + .theme-toggle, .btn-check:disabled + .btn, pre > .btn-check:disabled + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:disabled + .theme-toggle {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2680,11 +2680,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group pre button, pre .input-group button, .input-group .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .input-group .theme-toggle {
+.input-group .btn, .input-group pre > button, .input-group .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .input-group .theme-toggle {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group pre button:focus, pre .input-group button:focus, .input-group .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:focus, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .input-group .theme-toggle:focus {
+.input-group .btn:focus, .input-group pre > button:focus, .input-group .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:focus, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .input-group .theme-toggle:focus {
   z-index: 5;
 }
 
@@ -2707,7 +2707,7 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-pre .input-group-lg > button,
+pre.input-group-lg > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .input-group-lg > .theme-toggle {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -2718,7 +2718,7 @@ pre .input-group-lg > button,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-pre .input-group-sm > button,
+pre.input-group-sm > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .input-group-sm > .theme-toggle {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -2935,7 +2935,7 @@ pre .input-group-sm > button,
   z-index: 4;
 }
 
-.btn, pre button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle {
+.btn, pre > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2971,44 +2971,44 @@ pre .input-group-sm > button,
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, pre button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle {
+  .btn, pre > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle {
     transition: none;
   }
 }
-.btn:hover, pre button:hover, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:hover {
+.btn:hover, pre > button:hover, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, pre .btn-check + button:hover, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check + .theme-toggle:hover {
+.btn-check + .btn:hover, pre > .btn-check + button:hover, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check + .theme-toggle:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, pre button:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:focus-visible {
+.btn:focus-visible, pre > button:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, pre .btn-check:focus-visible + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:focus-visible + .theme-toggle {
+.btn-check:focus-visible + .btn, pre > .btn-check:focus-visible + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:focus-visible + .theme-toggle {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, pre .btn-check:checked + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:checked + .theme-toggle, :not(.btn-check) + .btn:active, pre :not(.btn-check) + button:active, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item :not(.btn-check) + .theme-toggle:active, .btn:first-child:active, pre button:first-child:active, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:first-child:active, .btn.active, pre button.active, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .active.theme-toggle, .btn.show, pre button.show, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .show.theme-toggle {
+.btn-check:checked + .btn, pre > .btn-check:checked + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:checked + .theme-toggle, :not(.btn-check) + .btn:active, pre > :not(.btn-check) + button:active, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item :not(.btn-check) + .theme-toggle:active, .btn:first-child:active, pre > button:first-child:active, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:first-child:active, .btn.active, pre > button.active, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .active.theme-toggle, .btn.show, pre > button.show, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .show.theme-toggle {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, pre .btn-check:checked + button:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:checked + .theme-toggle:focus-visible, :not(.btn-check) + .btn:active:focus-visible, pre :not(.btn-check) + button:active:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item :not(.btn-check) + .theme-toggle:active:focus-visible, .btn:first-child:active:focus-visible, pre button:first-child:active:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:first-child:active:focus-visible, .btn.active:focus-visible, pre button.active:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .active.theme-toggle:focus-visible, .btn.show:focus-visible, pre button.show:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .show.theme-toggle:focus-visible {
+.btn-check:checked + .btn:focus-visible, pre > .btn-check:checked + button:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:checked + .theme-toggle:focus-visible, :not(.btn-check) + .btn:active:focus-visible, pre > :not(.btn-check) + button:active:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item :not(.btn-check) + .theme-toggle:active:focus-visible, .btn:first-child:active:focus-visible, pre > button:first-child:active:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:first-child:active:focus-visible, .btn.active:focus-visible, pre > button.active:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .active.theme-toggle:focus-visible, .btn.show:focus-visible, pre > button.show:focus-visible, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .show.theme-toggle:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked:focus-visible + .btn, pre .btn-check:checked:focus-visible + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:checked:focus-visible + .theme-toggle {
+.btn-check:checked:focus-visible + .btn, pre > .btn-check:checked:focus-visible + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-check:checked:focus-visible + .theme-toggle {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, pre button:disabled, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:disabled, .btn.disabled, pre button.disabled, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .disabled.theme-toggle, fieldset:disabled .btn, fieldset:disabled pre button, pre fieldset:disabled button, fieldset:disabled .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item fieldset:disabled .theme-toggle {
+.btn:disabled, pre > button:disabled, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle:disabled, .btn.disabled, pre > button.disabled, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .disabled.theme-toggle, fieldset:disabled .btn, fieldset:disabled pre > button, fieldset:disabled .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item fieldset:disabled .theme-toggle {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -3310,14 +3310,14 @@ pre .input-group-sm > button,
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn, pre .btn-group-lg > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-lg > .theme-toggle {
+.btn-lg, .btn-group-lg > .btn, pre.btn-group-lg > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-lg > .theme-toggle {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
   --bs-btn-border-radius: var(--bs-border-radius-lg);
 }
 
-.btn-sm, .btn-group-sm > .btn, pre .btn-group-sm > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-sm > .theme-toggle {
+.btn-sm, .btn-group-sm > .btn, pre.btn-group-sm > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-sm > .theme-toggle {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
@@ -3684,46 +3684,46 @@ pre .input-group-sm > button,
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, pre .btn-group > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle,
+.btn-group > .btn, pre.btn-group > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle,
 .btn-group-vertical > .btn,
-pre .btn-group-vertical > button,
+pre.btn-group-vertical > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, pre .btn-group > .btn-check:checked + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .btn-check:checked + .theme-toggle,
+.btn-group > .btn-check:checked + .btn, pre.btn-group > .btn-check:checked + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .btn-check:checked + .theme-toggle,
 .btn-group > .btn-check:focus + .btn,
-pre .btn-group > .btn-check:focus + button,
+pre.btn-group > .btn-check:focus + button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .btn-check:focus + .theme-toggle,
 .btn-group > .btn:hover,
-pre .btn-group > button:hover,
+pre.btn-group > button:hover,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:hover,
 .btn-group > .btn:focus,
-pre .btn-group > button:focus,
+pre.btn-group > button:focus,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:focus,
 .btn-group > .btn:active,
-pre .btn-group > button:active,
+pre.btn-group > button:active,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:active,
 .btn-group > .btn.active,
-pre .btn-group > button.active,
+pre.btn-group > button.active,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .active.theme-toggle,
 .btn-group-vertical > .btn-check:checked + .btn,
-pre .btn-group-vertical > .btn-check:checked + button,
+pre.btn-group-vertical > .btn-check:checked + button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .btn-check:checked + .theme-toggle,
 .btn-group-vertical > .btn-check:focus + .btn,
-pre .btn-group-vertical > .btn-check:focus + button,
+pre.btn-group-vertical > .btn-check:focus + button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .btn-check:focus + .theme-toggle,
 .btn-group-vertical > .btn:hover,
-pre .btn-group-vertical > button:hover,
+pre.btn-group-vertical > button:hover,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:hover,
 .btn-group-vertical > .btn:focus,
-pre .btn-group-vertical > button:focus,
+pre.btn-group-vertical > button:focus,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:focus,
 .btn-group-vertical > .btn:active,
-pre .btn-group-vertical > button:active,
+pre.btn-group-vertical > button:active,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:active,
 .btn-group-vertical > .btn.active,
-pre .btn-group-vertical > button.active,
+pre.btn-group-vertical > button.active,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .active.theme-toggle {
   z-index: 1;
 }
@@ -3740,26 +3740,26 @@ pre .btn-group-vertical > button.active,
 .btn-group {
   border-radius: var(--bs-border-radius);
 }
-.btn-group > :not(.btn-check:first-child) + .btn, pre .btn-group > :not(.btn-check:first-child) + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > :not(.btn-check:first-child) + .theme-toggle,
+.btn-group > :not(.btn-check:first-child) + .btn, pre.btn-group > :not(.btn-check:first-child) + button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > :not(.btn-check:first-child) + .theme-toggle,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: calc(var(--bs-border-width) * -1);
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), pre .btn-group > button:not(:last-child):not(.dropdown-toggle), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), pre.btn-group > button:not(:last-child):not(.dropdown-toggle), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
-pre .btn-group > button.dropdown-toggle-split:first-child,
+pre.btn-group > button.dropdown-toggle-split:first-child,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .dropdown-toggle-split.theme-toggle:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
-pre .btn-group > .btn-group:not(:last-child) > button,
+.btn-group > pre.btn-group:not(:last-child) > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .btn-group:not(:last-child) > .theme-toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), pre .btn-group > button:nth-child(n+3), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), pre.btn-group > button:nth-child(n+3), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .theme-toggle:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-pre .btn-group > :not(.btn-check) + button,
+pre.btn-group > :not(.btn-check) + button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > :not(.btn-check) + .theme-toggle,
 .btn-group > .btn-group:not(:first-child) > .btn,
-pre .btn-group > .btn-group:not(:first-child) > button,
+.btn-group > pre.btn-group:not(:first-child) > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group > .btn-group:not(:first-child) > .theme-toggle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3776,12 +3776,12 @@ pre .btn-group > .btn-group:not(:first-child) > button,
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, pre .btn-group-sm > button + .dropdown-toggle-split, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-sm > .theme-toggle + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, pre.btn-group-sm > button + .dropdown-toggle-split, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-sm > .theme-toggle + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, pre .btn-group-lg > button + .dropdown-toggle-split, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-lg > .theme-toggle + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, pre.btn-group-lg > button + .dropdown-toggle-split, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-lg > .theme-toggle + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3791,24 +3791,24 @@ pre .btn-group > .btn-group:not(:first-child) > button,
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, pre .btn-group-vertical > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle,
+.btn-group-vertical > .btn, pre.btn-group-vertical > button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), pre .btn-group-vertical > button:not(:first-child), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), pre.btn-group-vertical > button:not(:first-child), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: calc(var(--bs-border-width) * -1);
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), pre .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), pre.btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-pre .btn-group-vertical > .btn-group:not(:last-child) > button,
+.btn-group-vertical > pre.btn-group:not(:last-child) > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .btn-group:not(:last-child) > .theme-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, pre .btn-group-vertical > button ~ .btn, pre .btn-group-vertical > .btn ~ button, pre .btn-group-vertical > button ~ button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle ~ .btn, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item pre .btn-group-vertical > .theme-toggle ~ button, pre .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle ~ button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .btn ~ .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item pre .btn-group-vertical > button ~ .theme-toggle, pre .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > button ~ .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle ~ .theme-toggle,
+.btn-group-vertical > .btn ~ .btn, pre.btn-group-vertical > button ~ .btn, pre.btn-group-vertical > .btn ~ button, pre.btn-group-vertical > button ~ button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle ~ .btn, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item pre.btn-group-vertical > .theme-toggle ~ button, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .btn ~ .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item pre.btn-group-vertical > button ~ .theme-toggle, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .theme-toggle ~ .theme-toggle,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-pre .btn-group-vertical > .btn-group:not(:first-child) > button,
+.btn-group-vertical > pre.btn-group:not(:first-child) > button,
 .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .btn-group-vertical > .btn-group:not(:first-child) > .theme-toggle {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -4871,7 +4871,7 @@ pre .btn-group-vertical > .btn-group:not(:first-child) > button,
   display: none;
 }
 
-.btn .badge, pre button .badge, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle .badge {
+.btn .badge, pre > button .badge, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .theme-toggle .badge {
   position: relative;
   top: -1px;
 }
@@ -6814,7 +6814,7 @@ pre .btn-group-vertical > .btn-group:not(:first-child) > button,
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before, pre button.placeholder::before, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .placeholder.theme-toggle::before {
+.placeholder.btn::before, pre > button.placeholder::before, .header .navbar .navbar__container .offcanvas .offcanvas__body .nav .nav__item .placeholder.theme-toggle::before {
   display: inline-block;
   content: "";
 }
@@ -7898,7 +7898,7 @@ pre .btn-group-vertical > .btn-group:not(:first-child) > button,
   margin: 0.5rem !important;
 }
 
-.m-3, pre button {
+.m-3, pre > button {
   margin: 1rem !important;
 }
 
@@ -13172,10 +13172,10 @@ pre {
   border: 1px solid var(--bs-border-color);
   overflow: hidden;
 }
-pre iframe, pre code {
+pre > iframe, pre > code {
   margin: 0px !important;
 }
-pre code {
+pre > code {
   display: block;
   flex: 1;
   flex-basis: 100%;
@@ -13189,7 +13189,7 @@ pre .editor, pre iframe {
     flex-basis: 100%;
   }
 }
-pre button {
+pre > button {
   display: block;
   width: 34px;
   height: 34px;
@@ -13199,6 +13199,26 @@ pre button {
   background: center no-repeat url("/static/media/box-arrow-up-right.svg");
   background-size: 24px;
   filter: invert(30%) sepia(75%) saturate(4670%) hue-rotate(212deg) brightness(103%) contrast(95%);
+}
+pre::before {
+  margin-right: 1px;
+  flex-grow: 1;
+  flex-basis: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 0.3em 1.5em;
+  display: flex;
+  width: 100%;
+  color: var(--bs-body-color);
+  background-color: var(--bs-border-color);
+  font-size: 12.25px;
+  line-height: 1.25;
+}
+pre:has(code.language-html)::before {
+  content: "HTML";
+}
+pre:has(code.language-css)::before {
+  content: "CSS";
 }
 
 .pagination {

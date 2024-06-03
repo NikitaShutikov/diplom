@@ -23,61 +23,63 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (let s of document.getElementsByTagName('code')) {
         let editor = ace.edit(s);
+        let options = {
+            autoScrollEditorIntoView: true,
+            animatedScroll: true,
+            useWorker: false,
+            fontSize: "12pt",
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true,
+            tabSize: 2,
+            highlightActiveLine: false,
+            highlightGutterLine: false,
+            showPrintMargin: false,
+            showGutter: false,
+            setShowPrintMargin: false,
+        };
+        let mode;
+        let container = s.parentElement;
+        let toolbar = document.createElement('div');
 
         if (s.classList.contains('editor')){
-            editor.setOptions({
-                useWorker: false,
-                fontSize: "12pt",
-                autoScrollEditorIntoView: true,
-                animatedScroll: true,
-                enableBasicAutocompletion: true,
-                enableSnippets: true,
-                enableLiveAutocompletion: true,
-                tabSize: 2,
-                highlightActiveLine: false,
-                highlightGutterLine: false,
-                showPrintMargin: false,
-                showGutter: false,
-                setShowPrintMargin: true,
-            });
+            mode ='ace/mode/html';
 
             let iframe = document.createElement('iframe');
-            s.parentElement.appendChild(iframe);
+            container.appendChild(iframe);
+            
             editor.getSession().on('change', function(){
                 updateIframe(editor, iframe)
             });
             updateIframe(editor, iframe);
 
             let newWinBtn = document.createElement('button');
+            newWinBtn.classList.add('new-win-btn');
             newWinBtn.addEventListener('click', function() { openInNewWindow(editor); });
-            s.parentElement.appendChild(newWinBtn);
+            container.appendChild(newWinBtn);
+            
+
         }
         else {
-            editor.setOptions({
-                useWorker: false,
-                fontSize: "12pt",
-                enableBasicAutocompletion: true,
-                enableSnippets: true,
-                enableLiveAutocompletion: true,
-                tabSize: 2,
-                readOnly: true,
-                maxLines: Infinity,
-                highlightActiveLine: false,
-                highlightGutterLine: false,
-                showPrintMargin: false,
-                showGutter: false,
-                setShowPrintMargin: true,
-            });
-            editor.renderer.$cursorLayer.element.style.display = "none"
+            if(s.classList.contains('language-html')){
+                mode = 'ace/mode/html';
+            }
+            else{
+                mode = 'ace/mode/css';
+            }
+            options.readOnly = true;
+            options.maxLines = Infinity;
+            editor.renderer.$cursorLayer.element.style.display = "none";
+
+
         }
+
+
+        editor.session.setMode(mode);
+        editor.setOptions(options);
         editor.renderer.setPadding(15);
         editor.renderer.setScrollMargin(15, 15)
-        if (s.classList.contains('language-html')){
-            editor.session.setMode('ace/mode/html');
-        }
-        else{
-            editor.session.setMode('ace/mode/css');
-        }
+
 
 
     }

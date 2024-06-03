@@ -79,10 +79,10 @@ pre {
     border: 1px solid var(--bs-border-color);
     overflow: hidden;
 
-    iframe, code {
+    & > iframe, & > code {
         margin: 0px !important;
     }
-    code {
+    & > code {
 
         display: block;
         flex: 1;
@@ -101,7 +101,7 @@ pre {
             flex-basis: 100%;
         }
     }
-    button {
+    & > button {
         @extend .m-3;
         @extend .btn;
         display: block;
@@ -121,24 +121,27 @@ pre {
     //     color: green;
     // }
 
-    // &::before{
-    //     flex-grow: 1;
-    //     flex-basis: 100%;
-    //     height: min-content;
-    //     padding: 0.3em 1.5em;
-    //     display: block;
-    //     width: 100%;
-    //     color: var(--bs-body-color);
-    //     background-color: var(--bs-border-color);
-    //     font-size: 12.25px;
-    //     line-height: $line-height-sm;
-    // }
-    // &:has(code.language-html)::before{
-    //     content: "HTML";
-    // }
-    // &:has(code.language-css)::before{
-    //     content: "CSS";
-    // }
+    &::before{
+
+        margin-right: 1px;
+        flex-grow: 1;
+        flex-basis: 100%;
+        height: min-content;
+        padding: 0.3em 1.5em;
+        display: flex;
+        width: 100%;
+        color: var(--bs-body-color);
+        background-color: var(--bs-border-color);
+        font-size: 12.25px;
+        line-height: $line-height-sm;
+        
+    }
+    &:has(code.language-html)::before{
+        content: "HTML";
+    }
+    &:has(code.language-css)::before{
+        content: "CSS";
+    }
 
 }
 
