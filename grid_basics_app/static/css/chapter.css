@@ -729,7 +729,7 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container, .footer, .main, .header,
+.container, .footer, .main,
 .container-fluid,
 .header .navbar .navbar__container .offcanvas,
 .header .navbar .navbar__container,
@@ -749,27 +749,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, .footer, .main, .header {
+  .container-sm, .container, .footer, .main {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, .footer, .main, .header {
+  .container-md, .container-sm, .container, .footer, .main {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, .footer, .main, .header {
+  .container-lg, .container-md, .container-sm, .container, .footer, .main {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, .footer, .main, .header {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, .footer, .main {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .footer, .main, .header {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .footer, .main {
     max-width: 1320px;
   }
 }
@@ -3996,7 +3996,7 @@ pre.btn-group > :not(.btn-check) + button,
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container, .navbar > .footer, .navbar > .main, .navbar > .header,
+.navbar > .container, .navbar > .footer, .navbar > .main,
 .navbar > .container-fluid,
 .header .navbar .navbar__container .navbar > .offcanvas,
 .header .navbar > .navbar__container,
@@ -12557,7 +12557,7 @@ pre.btn-group > :not(.btn-check) + button,
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container, .navbar > .footer, .navbar > .main, .navbar > .header,
+.navbar > .container, .navbar > .footer, .navbar > .main,
 .navbar > .container-fluid,
 .header .navbar .navbar__container .navbar > .offcanvas,
 .header .navbar > .navbar__container,
